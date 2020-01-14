@@ -55,7 +55,6 @@ class StudentCatalog extends React.Component {
             <div className='holdsTableDiv'>
                <span className='holdbtns'> 
                    <button type='submit' className='btn'> Add A New Student </button>
-                    <button type='submit' className='btn'> Update Existing Student </button>
                 </span>
                 <StudentContext.Provider value={this.state}>
                     <StudentList />

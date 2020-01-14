@@ -9,6 +9,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import StudentInfo from './components/StudentInfo';
 
 function App() {
   return (
@@ -21,6 +22,12 @@ function App() {
           </Route>
           <Route exact path='/dashboard'>
             <Dashboard/>
+          </Route>
+          <Route exact path='/student'>
+            <StudentInfo/>
+          </Route>
+          <Route exact path='/hogwarts'>
+            <StudentInfo/>
           </Route>
         </Switch>
       </div>
