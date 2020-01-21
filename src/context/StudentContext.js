@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StudentContext = React.createContext({
-    students:[],
+    students:[]
     // addStudent: (newStudent) => { }
 })
 

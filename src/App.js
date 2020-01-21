@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import SideNavBar from './components/SideNavBar';
-// import StudentCatalog from './components/OLD-StudentCatalog';
 import StudentCatalog from './components/StudentCatalog';
+import CreateStudent from './components/CreateStudent';
 import Dashboard from './components/Dashboard';
 import {
   BrowserRouter as Router,
@@ -23,11 +23,11 @@ function App() {
           <Route exact path='/dashboard'>
             <Dashboard/>
           </Route>
-          <Route exact path='/student'>
+          <Route path='/student/'>
             <StudentInfo/>
           </Route>
-          <Route exact path='/hogwarts'>
-            <StudentInfo/>
+          <Route exact path='/add_student'>
+            <CreateStudent/>
           </Route>
         </Switch>
       </div>

@@ -6,6 +6,16 @@ export function getAllStudents() {
     return axios.get(`${baseUrl}/`);
 }
 
+export function getStudentInfo(student_id) {
+    return axios.get(`${baseUrl}/student/?id=${student_id}`);
+}
+
+
 export function postNewStudent(student) {
-    return axios.post(`${baseUrl}/${student.id}`, student.last_name);
+    console.log('FROM POST',student)
+    return axios.post(`${baseUrl}/add_student`, student);
+}
+
+export function removeStudent(student_id){
+    axios.delete(`${baseUrl}/remove/${student_id}`)
 }

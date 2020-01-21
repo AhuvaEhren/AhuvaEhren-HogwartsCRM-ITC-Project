@@ -1,16 +1,10 @@
 import React from 'react';
 import StudentContext from '../context/StudentContext';
 import { Link } from "react-router-dom";
-import { getStudentId } from './StudentInfo';
 
 const StudentList = props => {
     return (
         <StudentContext.Consumer>
-
-{/* {getStudentId = () => {
-    console.log(this.student.id)
-} 
-} */}
             {({ students }) => (
                 <div className='tableDiv'>
 
@@ -22,7 +16,6 @@ const StudentList = props => {
                                 <td>Last Name:</td>
                                 <td>Created:</td>
                                 <td>Updated:</td>
-
                             </tr>
                             {students.map((student) => {
                                 return (
@@ -32,9 +25,12 @@ const StudentList = props => {
                                         <td>{student.last_name}</td>
                                         <td>{student.created_time}</td>
                                         <td>{student.last_updated}</td>
-                                        <Link to='/student'>
-                                            <td><button type='button'>Student Info</button></td>
+                                    <Link to={`/student/?id=${student.id}`}>
+                                            <td><button type='button'>Student Info/Edit</button></td>
                                         </Link>
+                                        
+                                        {/* <td><button type='button' >Remove</button></td>
+                                        <td><button type='button' onClick={this.removeStudent()}>Remove</button></td> */}
                                     </tr>
                                 )
 

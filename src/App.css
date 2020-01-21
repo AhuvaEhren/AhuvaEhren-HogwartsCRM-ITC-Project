@@ -103,3 +103,9 @@
   padding: 3%;
   width: 22%;
 }
+
+.create-student-form {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
